@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'tela_inicio.dart'; // Importe o arquivo tela_inicio.dart
+import 'telas/tela_inicio.dart'; // Importe o arquivo tela_inicio.dart
 
 void main() {
   runApp(MyApp());
