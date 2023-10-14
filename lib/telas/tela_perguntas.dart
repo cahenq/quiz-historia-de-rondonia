@@ -185,15 +185,18 @@ class _TelaPerguntasState extends State<TelaPerguntas> {
   }
 
   void _responderPergunta(String resposta) {
-    DadosQuiz.respostas.add(resposta);
-     if (_currentQuestionIndex < perguntas.length - 1) {
-    setState(() {
-      _currentQuestionIndex++;
-    });
-  } else {
-    print('Todas as perguntas foram respondidas');
-  }
-  }
+  DadosQuiz.respostas.add(resposta);
+
+if (_currentQuestionIndex < perguntas.length - 1) {
+  setState(() {
+    _currentQuestionIndex++;
+  });
+} else {
+  Navigator.pushReplacementNamed(context, '/resultados');
+}
+
+}
+
 
   @override
   Widget build(BuildContext context) {

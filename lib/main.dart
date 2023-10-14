@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'telas/tela_inicio.dart'; // Importe o arquivo tela_inicio.dart
+import 'telas/tela_inicio.dart';
+import 'telas/tela_perguntas.dart'; // Importe o arquivo tela_perguntas.dart
+import 'telas/tela_resultados.dart'; // Importe o arquivo tela_resultados.dart
 
 void main() {
   runApp(MyApp());
@@ -10,7 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: TelaInicio(), // Use o widget TelaInicio() do arquivo tela_inicio.dart
+      initialRoute: '/',
+      routes: {
+        '/': (context) => TelaInicio(),
+        '/perguntas': (context) => TelaPerguntas(),
+        '/resultados': (context) => TelaResultados(),
+      },
     );
   }
 }
