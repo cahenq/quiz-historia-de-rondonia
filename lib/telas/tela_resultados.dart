@@ -4,9 +4,9 @@ import 'tela_inicio.dart';
 import 'package:quiz_game/dadosquiz.dart';
 
 class TelaResultados extends StatelessWidget {
-  
 
-  
+  final int pontuacao; // Variável para armazenar a pontuação.
+  TelaResultados(this.pontuacao); // Construtor para receber a pontuação.
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class TelaResultados extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'SEU RESULTADO FOI ${DadosQuiz.pontos}',
+              'SEU ACERTO FOI  $pontuacao DE 15 PERGUNTAS',
               style: TextStyle(
                 fontFamily: 'GeometryExtraBold',
                 fontWeight: FontWeight.bold,
@@ -67,6 +67,7 @@ class TelaResultados extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => TelaInicio()),
+                  
                 );
               },
               style: ButtonStyle(

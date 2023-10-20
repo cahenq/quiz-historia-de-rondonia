@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'telas/tela_inicio.dart';
-import 'telas/tela_perguntas.dart'; // Importe o arquivo tela_perguntas.dart
-import 'telas/tela_resultados.dart'; // Importe o arquivo tela_resultados.dart
+import 'telas/tela_perguntas.dart';
+import 'telas/tela_resultados.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => TelaInicio(),
         '/perguntas': (context) => TelaPerguntas(),
-        '/resultados': (context) => TelaResultados(),
+        '/resultados': (context) => TelaResultados(0), // Fornecendo um valor inicial para 'pontuacao'
       },
     );
   }

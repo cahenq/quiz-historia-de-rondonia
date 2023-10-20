@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_game/telas/tela_resultados.dart';
 import '../dadosquiz.dart';
 import 'dart:math';
 
@@ -10,6 +11,8 @@ class TelaPerguntas extends StatefulWidget {
 
 class _TelaPerguntasState extends State<TelaPerguntas> {
   int _currentQuestionIndex = 0;
+  int pontuacao = 0;
+
 
   List<Map<String, dynamic>> perguntas = [
     {
@@ -185,14 +188,20 @@ class _TelaPerguntasState extends State<TelaPerguntas> {
   }
 
   void _responderPergunta(String resposta) {
-  DadosQuiz.respostas.add(resposta);
+    if (resposta == perguntas[_currentQuestionIndex]['resposta']) {
+      pontuacao ++;
+    }
 
 if (_currentQuestionIndex < perguntas.length - 1) {
   setState(() {
     _currentQuestionIndex++;
   });
 } else {
-  Navigator.pushReplacementNamed(context, '/resultados');
+  Navigator.pushReplacement(context, 
+  MaterialPageRoute(
+    builder: (context) => TelaResultados(pontuacao),
+  )
+  );
 }
 
 }
