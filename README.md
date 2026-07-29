@@ -27,7 +27,7 @@
 ## Objetivos do projeto
 
 - Promover o aprendizado da História de Rondônia de forma interativa;
-- Aplicar os conhecimentos adquiridos na disciplina de Programação para Dispositivos Móveis;
+- Aplicar os conhecimentos adquiridos na disciplina de Linguagem de Programação;
 - Desenvolver uma aplicação mobile utilizando Flutter;
 - Demonstrar conceitos de navegação entre telas, gerenciamento de estado e interface gráfica.
 
